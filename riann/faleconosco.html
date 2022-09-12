@@ -1,0 +1,72 @@
+!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta name="UTF-8">
+    <meta name="description" content="Site artech ar conticionados">
+    <meta name="keywords" content="Ar-conticionado, refrigeracao, inverter, janela, split, aquecedores">
+    <meta name="author" content="artech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artech ar conticionados</title>
+    <title>AR CONDICIONADOS</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Artech ar Condicionados</h1>
+        <img src="imagens/logo (1).png">
+
+
+        <nav>
+            <a href="index.html">
+                <div class="opcao">inicio</div>
+            </a>
+            <a href="produtos.html">
+                <div class="opcao">produtos</div>
+            </a>
+            <a href="faleconosco.html">
+                <div class="opcao">faleconosco</div>
+            </a>
+
+        </nav>
+
+    </header>
+
+    <form name="frmfaleconosco" method="post" action="#" onsubmit="return validafaleconosco"></form>
+    <fieldset class="faleconosco">
+        <legend>Dados pessoais</legend>
+
+
+        <label for="nome">Nome</label>
+        <input type="text" name="txtnome" id="nome" placeholder="Digite seu nome completo">
+
+        <label for="nome">Nome</label>
+        <input type="text" name="txtfone" id="fone" placeholder="Digite seu Telefone">
+
+        <label for="nome">Nome</label>
+        <input type="text" name="txtemail" id="email" placeholder="Digite seu Email">
+
+        <label for="data_nascimento">Data nascimento</label>
+        <input type="date" name="txtdata_nascimento" id="data_nascimento">
+
+    </fieldset>
+
+    <fieldset class="faleconosco">
+    <legend>Motivo do contato</legend>
+    <label for="motivo">Motivo</label>
+    <select name="selmotivo" id="motivo" onchange="verificaMotivo(this.value)">
+    
+    <option value=" ">Escolha</option>
+    <option value="RE">Reclamação</option>
+    <option value="SU">Sugestão</option>
+    <option value="PR">informação sobre o produto</option>  
+
+    </select>
+    <div id="opcaoProduto"></div>
+    <label for="comentario">Comentário</label>
+    <textarea name="txtcomentario" id="Comentario"> </textarea>
+    <button type="reset" onclick="VerificaMotivo(null)">limpar</button><button type="submit">Enviar</button>
+    
+</fieldset>
